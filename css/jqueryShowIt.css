@@ -1,0 +1,49 @@
+/*css初始化*/
+body,div,img{padding:0;margin:0;}
+body{font-family: 'mirosoft yahei';font-size: 62.5%;}
+img{vertical-align: middle;border:0;}
+
+/*开始*/
+.move-img{
+	margin:100px auto;
+	border:1px solid #e5e5e5;
+	width: 520px;
+	height: 280px;
+	overflow: hidden;
+	position: relative;
+}
+.img-box{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 520px;
+	height: 280px;
+}
+.img-box img{
+	width: 520px;
+	height: 280px;
+}
+.img-dot{
+	position: absolute;
+	bottom:15px;
+	left:50%;
+	height: 13px;
+	border-radius: 6px;
+	margin-left: 0;
+	background:rgba(255,255,255,0.3);
+}
+.img-dot span{
+	display: inline-block;
+	margin:2px;
+	width: 9px;
+	height: 9px;
+	background-color: #B7B7B7;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.img-dot span:hover{
+	background-color: #FF4400;
+}
+.img-dot .active{
+	background-color: #FF4400;
+}
