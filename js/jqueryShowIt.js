@@ -21,7 +21,7 @@ var data={
 
 function moveImg(data,domEG,domDot){
 	this.imgData=data;
-	this.imgNum=data.length;
+	          this.imgNum=data.length;
 	this.imgWidth=0;
 	this.currentIndex=0;
 	this.domEG=domEG;

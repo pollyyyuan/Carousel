@@ -1,0 +1,50 @@
+/*css初始化*/
+body,div,img{padding:0;margin:0;}
+body{font-family: 'mirosoft yahei';font-size: 62.5%;}
+img{vertical-align: middle;border:0;}
+$dotBoxSize:13px;
+$dotSize:9px;
+$dotMargin:10px;
+$dotColor:rgba(255,255,255,0.3);
+$dotBgc:#fff;
+$dotActiveColor:#FF4400;
+@mixin show($width:520px,$height:280px){
+	width: $width;
+	height: $height;
+}
+.move-img{
+	@include show;
+	margin:100px auto;
+	border:1px solid #e5e5e5;
+	overflow: hidden;
+	position: relative;
+	.img-box{
+		position: absolute;
+		top:0;
+		left:0;
+		@include show;
+		img{
+			@include show;
+		}
+	}
+	@import '../../../frame/dot.scss';
+	.img-dot{
+		@include dotsDirection;
+		border-radius: 6px;
+		background: $dotColor;
+		span{
+			@include show($dotSize,$dotSize);
+			margin: $dotBoxSize - $dotSize;
+			cursor: pointer;
+			background-color: $dotBgc;
+			border-radius: 50%;
+			&:hover{
+				background-color: $dotActiveColor;
+			}
+		}
+		.active{
+			@extend span:hover;
+		}
+	}
+}
+
